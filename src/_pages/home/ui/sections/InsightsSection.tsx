@@ -60,8 +60,8 @@ export function InsightsSection() {
                         fill
                         sizes={
                           isFeatured
-                            ? "(max-width: 1023px) 100vw, 58vw"
-                            : "(max-width: 1023px) 100vw, 42vw"
+                            ? "(max-width: 63.9375rem) 100vw, 58vw"
+                            : "(max-width: 63.9375rem) 100vw, 42vw"
                         }
                         className={insightImageStyles()}
                       />

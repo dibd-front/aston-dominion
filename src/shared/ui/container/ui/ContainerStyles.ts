@@ -12,8 +12,8 @@ export const containerStyles = cva(
   {
     variants: {
       size: {
-        standard: ["max-w-[1320px]"],
-        wide: ["max-w-[1440px]"],
+        standard: ["max-w-[82.5rem]"],
+        wide: ["max-w-[90rem]"],
       },
     },
     defaultVariants: {

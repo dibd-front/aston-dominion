@@ -13,9 +13,9 @@ export const visualGlowStyles = cva([
   "GrowthCorridorsVisual-glow",
   "absolute",
   "inset-[12%]",
-  "rounded-full",
+  "rounded-[9999rem]",
   "bg-[radial-gradient(circle,rgba(19,70,111,0.62)_0%,rgba(6,31,56,0)_72%)]",
-  "blur-2xl",
+  "blur-[2.5rem]",
 ]);
 
 export const visualSvgStyles = cva([
@@ -30,7 +30,7 @@ export const visualGridLineStyles = cva([
   "GrowthCorridorsVisual-gridLine",
   "fill-none",
   "stroke-white/10",
-  "[stroke-width:1]",
+  "[stroke-width:0.0625rem]",
 ]);
 
 export const visualRouteStyles = cva([
@@ -38,7 +38,7 @@ export const visualRouteStyles = cva([
   "fill-none",
   "stroke-[#b59a68]/58",
   "[stroke-linecap:round]",
-  "[stroke-width:1.25]",
+  "[stroke-width:0.078125rem]",
 ]);
 
 export const visualRouteMutedStyles = cva([
@@ -46,7 +46,7 @@ export const visualRouteMutedStyles = cva([
   "fill-none",
   "stroke-[#b59a68]/24",
   "[stroke-dasharray:4_7]",
-  "[stroke-width:1]",
+  "[stroke-width:0.0625rem]",
 ]);
 
 export const visualNodeHaloStyles = cva([
@@ -57,20 +57,20 @@ export const visualNodeHaloStyles = cva([
 export const visualNodeStyles = cva([
   "GrowthCorridorsVisual-node",
   "fill-[#f0d59b]",
-  "[filter:drop-shadow(0_0_7px_rgba(240,213,155,0.9))]",
+  "[filter:drop-shadow(0_0_0.4375rem_rgba(240,213,155,0.9))]",
 ]);
 
 export const visualTracerStyles = cva([
   "GrowthCorridorsVisual-tracer",
   "fill-[#fff4d2]",
-  "[filter:drop-shadow(0_0_6px_rgba(255,230,174,0.95))]",
+  "[filter:drop-shadow(0_0_0.375rem_rgba(255,230,174,0.95))]",
 ]);
 
 export const visualLabelStyles = cva([
   "GrowthCorridorsVisual-label",
   "fill-white",
   "font-sans",
-  "text-[13px]",
+  "text-[0.8125rem]",
   "font-medium",
 ]);
 
@@ -91,7 +91,7 @@ export const visualCaptionStyles = cva([
 
 export const visualCaptionRuleStyles = cva([
   "GrowthCorridorsVisual-captionRule",
-  "h-px",
+  "h-[0.0625rem]",
   "w-7",
   "bg-accent",
 ]);

@@ -9,7 +9,7 @@ export const skipLinkStyles = cva([
   "top-4",
   "z-[60]",
   "-translate-y-24",
-  "rounded-[4px]",
+  "rounded-[0.25rem]",
   "bg-accent",
   "px-4",
   "py-3",

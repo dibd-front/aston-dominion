@@ -11,7 +11,7 @@ export function BrandLogo({ eager = false }: BrandLogoProps) {
         alt="Aston Dominion"
         width={270}
         height={202}
-        sizes="180px"
+        sizes="11.25rem"
         loading={eager ? "eager" : "lazy"}
         className={brandLogoImageStyles()}
       />

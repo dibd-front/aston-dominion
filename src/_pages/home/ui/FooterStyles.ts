@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority";
 
 export const footerStyles = cva([
   "Footer-root",
-  "border-t",
+  "border-t-[0.0625rem]",
   "border-white/10",
   "bg-primary-dark",
   "py-12",
@@ -56,7 +56,7 @@ export const footerLinkStyles = cva([
 export const footerBottomStyles = cva([
   "Footer-bottom",
   "mt-12",
-  "border-t",
+  "border-t-[0.0625rem]",
   "border-white/10",
   "pt-6",
   "text-[0.6875rem]",

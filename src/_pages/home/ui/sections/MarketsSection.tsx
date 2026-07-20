@@ -97,9 +97,13 @@ export function MarketsSection() {
               <motion.article
                 key={activeRegion.id}
                 className={marketPanelContentStyles()}
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+                initial={shouldReduceMotion ? false : { opacity: 0, y: "0.75rem" }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: -8 }}
+                exit={
+                  shouldReduceMotion
+                    ? { opacity: 1 }
+                    : { opacity: 0, y: "-0.5rem" }
+                }
                 transition={{ duration: shouldReduceMotion ? 0 : 0.38 }}
               >
                 <p className={marketAccentLabelStyles()}>{activeRegion.accentLabel}</p>

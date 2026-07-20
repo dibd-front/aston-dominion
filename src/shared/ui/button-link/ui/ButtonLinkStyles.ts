@@ -9,8 +9,8 @@ export const buttonLinkStyles = cva(
     "items-center",
     "justify-center",
     "gap-3",
-    "rounded-[4px]",
-    "border",
+    "rounded-[0.25rem]",
+    "border-[0.0625rem]",
     "px-6",
     "text-[0.75rem]",
     "font-semibold",
@@ -18,7 +18,7 @@ export const buttonLinkStyles = cva(
     "whitespace-nowrap",
     "transition-[background-color,border-color,color,transform]",
     "duration-300",
-    "active:translate-y-px",
+    "active:translate-y-[0.0625rem]",
   ],
   {
     variants: {

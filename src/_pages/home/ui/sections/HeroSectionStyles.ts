@@ -25,8 +25,8 @@ export const heroGridTextureStyles = cva([
   "inset-0",
   "-z-10",
   "opacity-[0.07]",
-  "[background-image:linear-gradient(rgba(255,255,255,0.24)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.16)_1px,transparent_1px)]",
-  "[background-size:80px_80px]",
+  "[background-image:linear-gradient(rgba(255,255,255,0.24)_0.0625rem,transparent_0.0625rem),linear-gradient(90deg,rgba(255,255,255,0.16)_0.0625rem,transparent_0.0625rem)]",
+  "[background-size:5rem_5rem]",
   "[mask-image:linear-gradient(to_left,black,transparent_72%)]",
 ]);
 
@@ -120,8 +120,8 @@ export const heroScrollLinkStyles = cva([
   "-translate-x-1/2",
   "items-center",
   "justify-center",
-  "rounded-full",
-  "border",
+  "rounded-[9999rem]",
+  "border-[0.0625rem]",
   "border-[#b59a68]/60",
   "text-[#d5bd8c]",
   "transition-colors",

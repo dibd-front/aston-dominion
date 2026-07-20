@@ -55,7 +55,7 @@ export const marketNavListStyles = cva([
   "MarketsSection-navList",
   "grid",
   "list-none",
-  "border-t",
+  "border-t-[0.0625rem]",
   "border-primary/15",
 ]);
 
@@ -68,7 +68,7 @@ export const marketButtonStyles = cva(
     "grid-cols-[2.5rem_1fr_auto]",
     "items-center",
     "gap-3",
-    "border-b",
+    "border-b-[0.0625rem]",
     "border-primary/15",
     "bg-transparent",
     "py-5",
@@ -123,7 +123,7 @@ export const marketPanelStyles = cva([
   "relative",
   "min-h-[30rem]",
   "overflow-hidden",
-  "border",
+  "border-[0.0625rem]",
   "border-primary/15",
   "bg-surface",
   "p-7",
@@ -139,18 +139,18 @@ export const marketPanelAccentStyles = cva([
   "-right-20",
   "-top-24",
   "size-80",
-  "rounded-full",
-  "border",
+  "rounded-[9999rem]",
+  "border-[0.0625rem]",
   "border-accent/20",
   "before:absolute",
   "before:inset-12",
-  "before:rounded-full",
-  "before:border",
+  "before:rounded-[9999rem]",
+  "before:border-[0.0625rem]",
   "before:border-accent/20",
   "after:absolute",
   "after:inset-24",
-  "after:rounded-full",
-  "after:border",
+  "after:rounded-[9999rem]",
+  "after:border-[0.0625rem]",
   "after:border-accent/25",
 ]);
 
@@ -203,7 +203,7 @@ export const marketFactsStyles = cva([
 
 export const marketFactStyles = cva([
   "MarketsSection-fact",
-  "border-l",
+  "border-l-[0.0625rem]",
   "border-accent",
   "pl-5",
 ]);
@@ -234,7 +234,7 @@ export const marketLocationsStyles = cva([
   "flex-wrap",
   "gap-x-5",
   "gap-y-2",
-  "border-t",
+  "border-t-[0.0625rem]",
   "border-primary/12",
   "pt-5",
 ]);

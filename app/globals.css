@@ -32,9 +32,14 @@
 }
 
 html {
+  font-size: clamp(2px, 0.901504vw, 30px); 
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
   overflow-x: clip;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
 }
 
 body {
@@ -57,8 +62,8 @@ body:has(dialog[open]) {
 }
 
 :where(a, button):focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.25rem;
 }
 
 @keyframes corridor-pulse {

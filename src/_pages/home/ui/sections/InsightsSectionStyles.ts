@@ -103,7 +103,7 @@ export const insightMetaStyles = cva([
 
 export const insightMetaRuleStyles = cva([
   "InsightsSection-metaRule",
-  "h-px",
+  "h-[0.0625rem]",
   "w-7",
   "bg-accent",
 ]);

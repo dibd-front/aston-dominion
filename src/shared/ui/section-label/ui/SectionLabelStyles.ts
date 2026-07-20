@@ -26,7 +26,7 @@ export const sectionLabelStyles = cva(
 );
 
 export const sectionLabelRuleStyles = cva(
-  ["SectionLabel-rule", "h-px", "w-7", "shrink-0"],
+  ["SectionLabel-rule", "h-[0.0625rem]", "w-7", "shrink-0"],
   {
     variants: {
       tone: {

@@ -15,7 +15,7 @@ export function AnimatedReveal({
   return (
     <motion.div
       className={animatedRevealStyles({ className })}
-      initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: "1.125rem" }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.16 }}
       transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
