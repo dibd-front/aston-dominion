@@ -1,8 +1,3 @@
-export interface NavigationItem {
-  readonly label: string;
-  readonly href: `#${string}`;
-}
-
 export interface MarketThesisMetric {
   readonly value: string;
   readonly label: string;
@@ -29,11 +24,11 @@ export interface ImpactMetric {
   readonly icon: "store" | "revenue" | "time" | "markets" | "marketSize" | "commerce";
 }
 
-export interface InsightArticle {
+export interface ArticlePreview {
   readonly category: string;
   readonly title: string;
   readonly description: string;
-  readonly href: `/insights/${string}`;
+  readonly href: `/articles/${string}`;
   readonly image: `/images/${string}`;
   readonly imageAlt: string;
 }
@@ -42,13 +37,6 @@ export interface ProcessStep {
   readonly title: string;
   readonly description: string;
 }
-
-export const navigationItems = [
-  { label: "Markets", href: "#markets" },
-  { label: "Services", href: "#services" },
-  { label: "Insights", href: "#insights" },
-  { label: "About", href: "#about" },
-] as const satisfies readonly NavigationItem[];
 
 export const marketThesisMetrics = [
   {
@@ -181,13 +169,13 @@ export const processSteps = [
   },
 ] as const satisfies readonly ProcessStep[];
 
-export const insights = [
+export const articles = [
   {
     category: "Global Retail Strategy",
     title: "The Great Rebalancing: Why Retail Diversification is No Longer Optional",
     description:
       "Why Southeast Asia, the Middle East, South Asia, Central Asia, and the Caucasus are becoming essential pillars of a resilient international retail portfolio.",
-    href: "/insights/the-great-rebalancing",
+    href: "/articles/the-great-rebalancing",
     image: "/images/great-rebalancing.jpg",
     imageAlt:
       "Retail goods and digital commerce balanced between established and emerging markets",
@@ -198,9 +186,9 @@ export const insights = [
       "The Rise of the Hybrid Consumer: Online-Offline Retail Convergence in Emerging Markets",
     description:
       "How smartphone adoption, changing consumer behaviour, logistics investment, and unified commerce are reshaping retail across emerging markets.",
-    href: "/insights/the-rise-of-the-hybrid-consumer",
+    href: "/articles/the-rise-of-the-hybrid-consumer",
     image: "/images/hybrid-consumer.jpg",
     imageAlt:
       "Consumer moving between mobile commerce and a physical grocery store",
   },
-] as const satisfies readonly InsightArticle[];
+] as const satisfies readonly ArticlePreview[];

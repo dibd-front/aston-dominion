@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import { BrandLogo } from "@/shared/ui/brand-logo";
 import { Container } from "@/shared/ui/container";
+import { siteNavigationItems } from "@/shared/config";
 
-import { navigationItems } from "../model/home-content";
 import {
   footerBottomStyles,
   footerBrandStyles,
@@ -14,9 +14,9 @@ import {
   footerNavListStyles,
   footerNavStyles,
   footerStyles,
-} from "./FooterStyles";
+} from "./SiteFooterStyles";
 
-export function Footer() {
+export function SiteFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -34,7 +34,7 @@ export function Footer() {
           </div>
           <nav aria-label="Footer" className={footerNavStyles()}>
             <ul role="list" className={footerNavListStyles()}>
-              {navigationItems.map((item) => (
+              {siteNavigationItems.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={footerLinkStyles()}>
                     {item.label}

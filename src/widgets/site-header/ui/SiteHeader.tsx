@@ -8,8 +8,8 @@ import { useMotionValueEvent, useScroll } from "motion/react";
 import { ButtonLink } from "@/shared/ui/button-link";
 import { BrandLogo } from "@/shared/ui/brand-logo";
 import { Container } from "@/shared/ui/container";
+import { siteNavigationItems } from "@/shared/config";
 
-import { navigationItems } from "../model/home-content";
 import {
   desktopNavStyles,
   headerInnerStyles,
@@ -27,9 +27,9 @@ import {
   mobileNavStyles,
   navLinkStyles,
   navListStyles,
-} from "./HeaderStyles";
+} from "./SiteHeaderStyles";
 
-export function Header() {
+export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -65,7 +65,7 @@ export function Header() {
 
           <nav aria-label="Primary" className={desktopNavStyles()}>
             <ul role="list" className={navListStyles()}>
-              {navigationItems.map((item) => (
+              {siteNavigationItems.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={navLinkStyles()}>
                     {item.label}
@@ -100,7 +100,12 @@ export function Header() {
       >
         <div className={mobileDialogInnerStyles()}>
           <div className={mobileDialogTopStyles()}>
-            <Link href="/" aria-label="Aston Dominion home" className={headerLogoLinkStyles()} onClick={closeMenu}>
+            <Link
+              href="/"
+              aria-label="Aston Dominion home"
+              className={headerLogoLinkStyles()}
+              onClick={closeMenu}
+            >
               <BrandLogo eager />
             </Link>
             <button
@@ -115,7 +120,7 @@ export function Header() {
 
           <nav aria-label="Mobile primary" className={mobileNavStyles()}>
             <ul role="list" className={mobileNavListStyles()}>
-              {navigationItems.map((item) => (
+              {siteNavigationItems.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={mobileNavLinkStyles()} onClick={closeMenu}>
                     {item.label}

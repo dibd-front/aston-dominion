@@ -34,7 +34,7 @@
 html {
   font-size: clamp(2px, 0.901504vw, 30px); 
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 0rem;
   overflow-x: clip;
 
   @media (max-width: 1024px) {

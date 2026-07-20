@@ -38,7 +38,7 @@ const impactIcons = {
 
 export function ImpactSection() {
   return (
-    <section id="about" aria-labelledby="impact-heading" className={impactSectionStyles()}>
+    <section id="impact" aria-labelledby="impact-heading" className={impactSectionStyles()}>
       <div aria-hidden="true" className={impactTextureStyles()} />
       <Container>
         <AnimatedReveal>

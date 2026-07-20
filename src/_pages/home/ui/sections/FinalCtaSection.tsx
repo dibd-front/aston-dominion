@@ -26,8 +26,8 @@ export function FinalCtaSection() {
             </p>
             <div className={finalCtaActionsStyles()}>
               <ButtonLink href="/contact">Start a Conversation</ButtonLink>
-              <ButtonLink href="#insights" variant="textLight">
-                Explore Our Insights
+              <ButtonLink href="/articles" variant="textLight">
+                Explore Our Articles
               </ButtonLink>
             </div>
           </div>

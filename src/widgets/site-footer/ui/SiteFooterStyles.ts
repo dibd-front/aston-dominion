@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 export const footerStyles = cva([
-  "Footer-root",
+  "SiteFooter-root",
   "border-t-[0.0625rem]",
   "border-white/10",
   "bg-primary-dark",
@@ -11,30 +11,27 @@ export const footerStyles = cva([
 ]);
 
 export const footerGridStyles = cva([
-  "Footer-grid",
+  "SiteFooter-grid",
   "grid",
   "gap-12",
   "md:grid-cols-[minmax(0,1.4fr)_minmax(0,0.8fr)]",
   "md:items-end",
 ]);
 
-export const footerBrandStyles = cva(["Footer-brand", "max-w-md"]);
-export const footerLogoStyles = cva(["Footer-logo", "-ml-3", "mb-4"]);
+export const footerBrandStyles = cva(["SiteFooter-brand", "max-w-md"]);
+export const footerLogoStyles = cva(["SiteFooter-logo", "-ml-3", "mb-4"]);
 export const footerDescriptionStyles = cva([
-  "Footer-description",
+  "SiteFooter-description",
   "max-w-[30rem]",
   "text-sm",
   "leading-6",
   "text-white/62",
 ]);
 
-export const footerNavStyles = cva([
-  "Footer-nav",
-  "md:justify-self-end",
-]);
+export const footerNavStyles = cva(["SiteFooter-nav", "md:justify-self-end"]);
 
 export const footerNavListStyles = cva([
-  "Footer-navList",
+  "SiteFooter-navList",
   "grid",
   "list-none",
   "grid-cols-2",
@@ -45,7 +42,7 @@ export const footerNavListStyles = cva([
 ]);
 
 export const footerLinkStyles = cva([
-  "Footer-link",
+  "SiteFooter-link",
   "text-xs",
   "font-medium",
   "text-white/72",
@@ -54,7 +51,7 @@ export const footerLinkStyles = cva([
 ]);
 
 export const footerBottomStyles = cva([
-  "Footer-bottom",
+  "SiteFooter-bottom",
   "mt-12",
   "border-t-[0.0625rem]",
   "border-white/10",

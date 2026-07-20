@@ -2,7 +2,7 @@ import { cva } from "class-variance-authority";
 
 export const headerStyles = cva(
   [
-    "Header-root",
+    "SiteHeader-root",
     "fixed",
     "inset-x-0",
     "top-0",
@@ -30,7 +30,7 @@ export const headerStyles = cva(
 );
 
 export const headerInnerStyles = cva([
-  "Header-inner",
+  "SiteHeader-inner",
   "flex",
   "h-[4.5rem]",
   "items-center",
@@ -38,7 +38,7 @@ export const headerInnerStyles = cva([
 ]);
 
 export const headerLogoLinkStyles = cva([
-  "Header-logoLink",
+  "SiteHeader-logoLink",
   "relative",
   "z-10",
   "-ml-3",
@@ -46,7 +46,7 @@ export const headerLogoLinkStyles = cva([
 ]);
 
 export const desktopNavStyles = cva([
-  "Header-desktopNav",
+  "SiteHeader-desktopNav",
   "hidden",
   "items-center",
   "gap-9",
@@ -54,7 +54,7 @@ export const desktopNavStyles = cva([
 ]);
 
 export const navListStyles = cva([
-  "Header-navList",
+  "SiteHeader-navList",
   "flex",
   "list-none",
   "items-center",
@@ -62,7 +62,7 @@ export const navListStyles = cva([
 ]);
 
 export const navLinkStyles = cva([
-  "Header-navLink",
+  "SiteHeader-navLink",
   "relative",
   "py-2",
   "text-[0.75rem]",
@@ -84,7 +84,7 @@ export const navLinkStyles = cva([
 ]);
 
 export const mobileMenuButtonStyles = cva([
-  "Header-mobileMenuButton",
+  "SiteHeader-mobileMenuButton",
   "inline-flex",
   "size-11",
   "items-center",
@@ -100,10 +100,10 @@ export const mobileMenuButtonStyles = cva([
   "lg:hidden",
 ]);
 
-export const mobileMenuIconStyles = cva(["Header-mobileMenuIcon", "size-5"]);
+export const mobileMenuIconStyles = cva(["SiteHeader-mobileMenuIcon", "size-5"]);
 
 export const mobileDialogStyles = cva([
-  "Header-mobileDialog",
+  "SiteHeader-mobileDialog",
   "fixed",
   "inset-0",
   "m-0",
@@ -120,7 +120,7 @@ export const mobileDialogStyles = cva([
 ]);
 
 export const mobileDialogInnerStyles = cva([
-  "Header-mobileDialogInner",
+  "SiteHeader-mobileDialogInner",
   "mx-auto",
   "flex",
   "min-h-dvh",
@@ -133,7 +133,7 @@ export const mobileDialogInnerStyles = cva([
 ]);
 
 export const mobileDialogTopStyles = cva([
-  "Header-mobileDialogTop",
+  "SiteHeader-mobileDialogTop",
   "flex",
   "h-[4.5rem]",
   "items-center",
@@ -141,7 +141,7 @@ export const mobileDialogTopStyles = cva([
 ]);
 
 export const mobileCloseButtonStyles = cva([
-  "Header-mobileCloseButton",
+  "SiteHeader-mobileCloseButton",
   "inline-flex",
   "size-11",
   "items-center",
@@ -156,7 +156,7 @@ export const mobileCloseButtonStyles = cva([
 ]);
 
 export const mobileNavStyles = cva([
-  "Header-mobileNav",
+  "SiteHeader-mobileNav",
   "flex",
   "flex-1",
   "flex-col",
@@ -165,14 +165,14 @@ export const mobileNavStyles = cva([
 ]);
 
 export const mobileNavListStyles = cva([
-  "Header-mobileNavList",
+  "SiteHeader-mobileNavList",
   "grid",
   "list-none",
   "gap-1",
 ]);
 
 export const mobileNavLinkStyles = cva([
-  "Header-mobileNavLink",
+  "SiteHeader-mobileNavLink",
   "block",
   "border-b-[0.0625rem]",
   "border-white/15",
@@ -185,4 +185,4 @@ export const mobileNavLinkStyles = cva([
   "hover:text-[#d5bd8c]",
 ]);
 
-export const mobileCtaStyles = cva(["Header-mobileCta", "pt-8"]);
+export const mobileCtaStyles = cva(["SiteHeader-mobileCta", "pt-8"]);

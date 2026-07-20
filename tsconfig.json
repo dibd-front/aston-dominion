@@ -21,6 +21,7 @@
     "paths": {
       "@/_app/*": ["./src/_app/*"],
       "@/_pages/*": ["./src/_pages/*"],
+      "@/widgets/*": ["./src/widgets/*"],
       "@/shared/*": ["./src/shared/*"]
     }
   },

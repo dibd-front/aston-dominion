@@ -2,11 +2,11 @@ import { ApproachSection } from "./sections/ApproachSection";
 import { FinalCtaSection } from "./sections/FinalCtaSection";
 import { HeroSection } from "./sections/HeroSection";
 import { ImpactSection } from "./sections/ImpactSection";
-import { InsightsSection } from "./sections/InsightsSection";
+import { ArticlesSection } from "./sections/ArticlesSection";
 import { MarketsSection } from "./sections/MarketsSection";
 import { ServicesSection } from "./sections/ServicesSection";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
+import { SiteFooter } from "@/widgets/site-footer";
+import { SiteHeader } from "@/widgets/site-header";
 import { mainStyles, pageStyles, skipLinkStyles } from "./HomePageStyles";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
@@ -26,17 +26,17 @@ export function HomePage() {
       <a href="#main-content" className={skipLinkStyles()}>
         Skip to main content
       </a>
-      <Header />
+      <SiteHeader />
       <main id="main-content" tabIndex={-1} className={mainStyles()}>
         <HeroSection />
         <MarketsSection />
         <ServicesSection />
         <ImpactSection />
         {/* <ApproachSection /> */}
-        <InsightsSection />
+        <ArticlesSection />
         <FinalCtaSection />
       </main>
-      <Footer />
+      <SiteFooter />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
