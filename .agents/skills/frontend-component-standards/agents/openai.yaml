@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Frontend Component Standards'
+  short_description: 'React/Next component architecture rules'
+  default_prompt: 'Use $frontend-component-standards to create or refactor a React/Next component in this codebase.'

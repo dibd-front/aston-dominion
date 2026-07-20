@@ -1,0 +1,5 @@
+src/shared/api/generated/**
+src/shared/api/orval/**
+scripts/download-openapi-spec.js
+orval.config.cjs
+.helm/
