@@ -9,7 +9,7 @@ export const articleCatalogue = [
     description:
       "Why Southeast Asia, the Middle East, South Asia, Central Asia, and the Caucasus are becoming essential pillars of a resilient international retail portfolio.",
     fileName: "the-great-rebalancing.md",
-    image: "/images/great-rebalancing.jpg",
+    image: "/images/aston1.jpg",
     imageAlt:
       "Retail goods and digital commerce balanced between established and emerging markets",
   },
@@ -22,7 +22,7 @@ export const articleCatalogue = [
     description:
       "How smartphone adoption, changing consumer behaviour, logistics investment, and unified commerce are reshaping retail across emerging markets.",
     fileName: "the-rise-of-the-hybrid-consumer.md",
-    image: "/images/hybrid-consumer.jpg",
+    image: "/images/aston2.jpg",
     imageAlt:
       "Consumer moving between mobile commerce and a physical grocery store",
   },
@@ -34,6 +34,9 @@ export const articleCatalogue = [
     description:
       "Why local knowledge, regulatory access, and aligned incentives make partnership-led entry more resilient than going it alone.",
     fileName: "the-partner-economy.md",
+    image: "/images/aston3.png",
+    imageAlt:
+      "The Partner Economy",
   },
   {
     id: "navigating-the-goldilocks-zone",
@@ -44,6 +47,9 @@ export const articleCatalogue = [
     description:
       "A practical framework for natural hedging, pricing power, and capital deployment across volatile growth markets.",
     fileName: "navigating-the-goldilocks-zone.md",
+    image: "/images/aston4.png",
+    imageAlt:
+      "Navigating the Goldilocks Zone",
   },
   {
     id: "central-and-south-asian-consumer",
@@ -53,6 +59,9 @@ export const articleCatalogue = [
     description:
       "A closer look at the consumer behaviours, spending patterns, and category shifts shaping Kazakhstan, India, Azerbaijan, and Georgia.",
     fileName: "central-and-south-asian-consumer.md",
+    image: "/images/aston5.png",
+    imageAlt:
+      "The Central Asian & South Asian Consumer",
   },
   {
     id: "digital-commerce-in-emerging-markets",
@@ -62,6 +71,9 @@ export const articleCatalogue = [
     description:
       "How retailers can unify customer data, inventory, fulfilment, and marketplace channels across rapidly digitising regions.",
     fileName: "digital-commerce-in-emerging-markets.md",
+    image: "/images/aston6.png",
+    imageAlt:
+      "Digital Commerce in Emerging Markets",
   },
   {
     id: "azerbaijan-and-georgia",
@@ -71,6 +83,9 @@ export const articleCatalogue = [
     description:
       "The hub-and-spoke opportunity connecting energy-funded consumer growth in Azerbaijan with Georgia's logistics advantage.",
     fileName: "azerbaijan-and-georgia.md",
+    image: "/images/aston7.png",
+    imageAlt:
+      "Azerbaijan & Georgia",
   },
   {
     id: "south-asia-retail-frontier",
@@ -80,5 +95,8 @@ export const articleCatalogue = [
     description:
       "The scale, digital acceleration, regional diversity, and entry considerations defining the next decade of South Asian retail.",
     fileName: "south-asia-retail-frontier.md",
+    image: "/images/aston8.png",
+    imageAlt:
+      "South Asia: The Next Trillion-Dollar Retail Frontier",
   },
 ] as const satisfies readonly ArticleMeta[];
