@@ -106,7 +106,7 @@ export const serviceDescriptionStyles = cva([
   "text-sm",
   "leading-7",
   "text-text-muted",
-  "lg:col-span-4",
+  "lg:col-span-7",
 ]);
 
 export const serviceAreasStyles = cva([

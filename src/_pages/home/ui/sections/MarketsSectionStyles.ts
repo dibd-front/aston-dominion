@@ -4,246 +4,114 @@ export const marketsSectionStyles = cva([
   "MarketsSection-root",
   "scroll-mt-20",
   "bg-background",
-  "py-24",
-  "sm:py-28",
-  "lg:py-36",
+  "py-20",
+  "sm:py-24",
+  "lg:py-28",
 ]);
 
-export const marketsHeaderStyles = cva([
-  "MarketsSection-header",
-  "max-w-[58rem]",
+export const marketsLayoutStyles = cva([
+  "MarketsSection-layout",
+  "grid",
+  "items-start",
+  "gap-14",
+  "lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]",
+  "lg:gap-16",
+  "xl:gap-20",
+]);
+
+export const marketsTextColumnStyles = cva([
+  "MarketsSection-textColumn",
+  "max-w-[48rem]",
 ]);
 
 export const marketsTitleStyles = cva([
   "MarketsSection-title",
   "mt-5",
-  "max-w-[16ch]",
+  "max-w-[22ch]",
   "font-serif",
-  "text-[clamp(2.7rem,7vw,4.7rem)]",
+  "text-[clamp(2.55rem,5.8vw,3.65rem)]",
   "font-medium",
   "leading-[0.98]",
   "tracking-[-0.025em]",
   "text-primary-dark",
+  "lg:text-[clamp(2.7rem,3.3vw,3.65rem)]",
 ]);
 
-export const marketsIntroStyles = cva([
-  "MarketsSection-intro",
-  "mt-6",
+export const marketsCopyStyles = cva([
+  "MarketsSection-copy",
+  "mt-8",
+  "grid",
   "max-w-[46rem]",
-  "text-[0.9375rem]",
-  "leading-7",
-  "text-text-muted",
+  "gap-5",
+  "text-[0.8125rem]",
+  "leading-[1.72]",
+  "text-primary-dark/76",
+  "sm:text-[0.875rem]",
 ]);
 
-export const marketsInteractiveStyles = cva([
-  "MarketsSection-interactive",
-  "mt-14",
+export const marketsMetricsGridStyles = cva([
+  "MarketsSection-metricsGrid",
+  'sticky top-10',
   "grid",
-  "gap-10",
-  "lg:mt-20",
-  "lg:grid-cols-12",
-  "lg:gap-8",
-]);
-
-export const marketNavStyles = cva([
-  "MarketsSection-nav",
-  "lg:col-span-4",
-  "lg:pr-8",
-]);
-
-export const marketNavListStyles = cva([
-  "MarketsSection-navList",
-  "grid",
-  "list-none",
-  "border-t-[0.0625rem]",
-  "border-primary/15",
-]);
-
-export const marketButtonStyles = cva(
-  [
-    "MarketsSection-button",
-    "group",
-    "grid",
-    "w-full",
-    "grid-cols-[2.5rem_1fr_auto]",
-    "items-center",
-    "gap-3",
-    "border-b-[0.0625rem]",
-    "border-primary/15",
-    "bg-transparent",
-    "py-5",
-    "text-left",
-    "transition-colors",
-    "duration-300",
-    "hover:text-[#806b43]",
-  ],
-  {
-    variants: {
-      active: {
-        false: ["text-text-muted"],
-        true: ["text-primary-dark"],
-      },
-    },
-    defaultVariants: {
-      active: false,
-    },
-  },
-);
-
-export const marketButtonNumberStyles = cva([
-  "MarketsSection-buttonNumber",
-  "text-[0.625rem]",
-  "font-semibold",
-  "tracking-[0.14em]",
-  "text-[#8a7349]",
-]);
-
-export const marketButtonLabelStyles = cva([
-  "MarketsSection-buttonLabel",
-  "font-serif",
-  "text-xl",
-  "font-semibold",
-  "leading-tight",
-]);
-
-export const marketButtonArrowStyles = cva(
-  ["MarketsSection-buttonArrow", "size-4", "transition-transform", "duration-300"],
-  {
-    variants: {
-      active: {
-        false: ["opacity-35", "group-hover:translate-x-1"],
-        true: ["translate-x-1", "text-[#8a7349]"],
-      },
-    },
-  },
-);
-
-export const marketPanelStyles = cva([
-  "MarketsSection-panel",
-  "relative",
-  "min-h-[30rem]",
+  "grid-cols-2",
+  "gap-[0.0625rem]",
   "overflow-hidden",
-  "border-[0.0625rem]",
-  "border-primary/15",
-  "bg-surface",
-  "p-7",
-  "sm:p-10",
-  "lg:col-span-8",
-  "lg:p-12",
+  "bg-primary/14",
+  "lg:grid-cols-3",
 ]);
 
-export const marketPanelAccentStyles = cva([
-  "MarketsSection-panelAccent",
-  "pointer-events-none",
-  "absolute",
-  "-right-20",
-  "-top-24",
-  "size-80",
-  "rounded-[9999rem]",
-  "border-[0.0625rem]",
-  "border-accent/20",
-  "before:absolute",
-  "before:inset-12",
-  "before:rounded-[9999rem]",
-  "before:border-[0.0625rem]",
-  "before:border-accent/20",
-  "after:absolute",
-  "after:inset-24",
-  "after:rounded-[9999rem]",
-  "after:border-[0.0625rem]",
-  "after:border-accent/25",
-]);
-
-export const marketPanelContentStyles = cva([
-  "MarketsSection-panelContent",
-  "relative",
-  "z-10",
+export const marketMetricStyles = cva([
+  "MarketsSection-metric",
   "flex",
-  "min-h-[24rem]",
+  "min-h-[14.5rem]",
   "flex-col",
+  "items-center",
+  "justify-center",
+  "bg-background",
+  "px-4",
+  "py-8",
+  "text-center",
+  "sm:min-h-[15.25rem]",
+  "sm:px-6",
+  "lg:min-h-[14.75rem]",
 ]);
 
-export const marketAccentLabelStyles = cva([
-  "MarketsSection-accentLabel",
+export const marketMetricIconStyles = cva([
+  "MarketsSection-metricIcon",
+  "size-10",
+  "shrink-0",
+  "text-accent",
+]);
+
+export const marketMetricLabelStyles = cva([
+  "MarketsSection-metricLabel",
+  "mt-5",
   "text-[0.625rem]",
   "font-semibold",
-  "tracking-[0.16em]",
-  "text-[#8a7349]",
+  "tracking-[0.1em]",
+  "text-primary-dark",
   "uppercase",
 ]);
 
-export const marketPanelTitleStyles = cva([
-  "MarketsSection-panelTitle",
+export const marketMetricValueStyles = cva([
+  "MarketsSection-metricValue",
   "mt-4",
-  "max-w-[16ch]",
+  "block",
   "font-serif",
-  "text-[clamp(2.3rem,6vw,4rem)]",
+  "text-[clamp(2rem,5vw,2.85rem)]",
   "font-medium",
   "leading-none",
+  "tracking-[-0.02em]",
   "text-primary-dark",
 ]);
 
-export const marketSummaryStyles = cva([
-  "MarketsSection-summary",
-  "mt-5",
-  "max-w-[42rem]",
-  "text-sm",
-  "leading-7",
-  "text-text-muted",
-]);
-
-export const marketFactsStyles = cva([
-  "MarketsSection-facts",
-  "mt-auto",
-  "grid",
-  "gap-6",
-  "pt-10",
-  "sm:grid-cols-2",
-]);
-
-export const marketFactStyles = cva([
-  "MarketsSection-fact",
-  "border-l-[0.0625rem]",
-  "border-accent",
-  "pl-5",
-]);
-
-export const marketFactValueStyles = cva([
-  "MarketsSection-factValue",
-  "font-serif",
-  "text-[clamp(2.2rem,5vw,3.5rem)]",
-  "font-semibold",
-  "leading-none",
-  "text-primary",
-]);
-
-export const marketFactLabelStyles = cva([
-  "MarketsSection-factLabel",
+export const marketMetricDescriptionStyles = cva([
+  "MarketsSection-metricDescription",
+  "mx-auto",
   "mt-2",
-  "max-w-[18rem]",
-  "text-xs",
-  "leading-5",
-  "text-text-muted",
-]);
-
-export const marketLocationsStyles = cva([
-  "MarketsSection-locations",
-  "mt-8",
-  "flex",
-  "list-none",
-  "flex-wrap",
-  "gap-x-5",
-  "gap-y-2",
-  "border-t-[0.0625rem]",
-  "border-primary/12",
-  "pt-5",
-]);
-
-export const marketLocationStyles = cva([
-  "MarketsSection-location",
+  "block",
+  "max-w-[14rem]",
   "text-[0.6875rem]",
-  "font-semibold",
-  "tracking-[0.1em]",
-  "text-primary/72",
-  "uppercase",
+  "leading-[1.45]",
+  "text-primary-dark/72",
 ]);

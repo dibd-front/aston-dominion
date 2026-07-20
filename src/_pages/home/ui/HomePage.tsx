@@ -32,7 +32,7 @@ export function HomePage() {
         <MarketsSection />
         <ServicesSection />
         <ImpactSection />
-        <ApproachSection />
+        {/* <ApproachSection /> */}
         <InsightsSection />
         <FinalCtaSection />
       </main>

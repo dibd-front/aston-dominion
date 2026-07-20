@@ -22,9 +22,7 @@ export function FinalCtaSection() {
               Scale Without Borders.
             </h2>
             <p className={finalCtaBodyStyles()}>
-              From Jakarta and Dubai to Mumbai, Almaty, Baku, and Tbilisi, Aston
-              Dominion helps investors and retail operators build resilient positions
-              in the world&apos;s next consumer markets.
+              The retail landscape is fragmenting. Those who diversify now will define the next decade. Those who wait will be left acquiring distressed assets. From the bustling malls of Jakarta and Dubai to the emerging consumer hubs of Almaty, Tbilisi, and Mumbai—we are your bridge to regional leadership.
             </p>
             <div className={finalCtaActionsStyles()}>
               <ButtonLink href="/contact">Start a Conversation</ButtonLink>

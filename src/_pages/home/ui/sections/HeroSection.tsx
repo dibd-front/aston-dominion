@@ -34,10 +34,7 @@ export function HeroSection() {
               The New Latitude of Growth.
             </h1>
             <p className={heroBodyStyles()}>
-              Diversify into the world&apos;s fastest-growing consumer corridors. We
-              architect market entry and operational scale for FMCG, Grocery, and
-              Consumer Electronics retail chains across Southeast Asia, the Middle
-              East, South Asia, Central Asia, and the Caucasus.
+              Diversify into the world's fastest-growing consumer corridors. We architect market entry and operational scale for FMCG, Grocery, and Consumer Electronics retail chains across Southeast Asia, the Middle East, and the emerging frontier markets of the Caucasus and Central Asia.
             </p>
             <div className={heroActionsStyles()}>
               <ButtonLink href="#markets">Explore Markets</ButtonLink>

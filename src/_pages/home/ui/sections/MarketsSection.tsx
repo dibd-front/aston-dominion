@@ -1,132 +1,92 @@
-"use client";
-
-import { useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import type { LucideIcon } from "lucide-react";
+import {
+  ChartNoAxesColumnIncreasing,
+  ChartNoAxesCombined,
+  Globe2,
+  ShoppingBag,
+  ShoppingCart,
+  UsersRound,
+} from "lucide-react";
 
 import { AnimatedReveal } from "@/shared/ui/animated-reveal";
 import { Container } from "@/shared/ui/container";
 import { SectionLabel } from "@/shared/ui/section-label";
 
-import type { MarketRegion } from "../../model/home-content";
-import { marketRegions } from "../../model/home-content";
+import type { MarketThesisMetric } from "../../model/home-content";
+import { marketThesisMetrics } from "../../model/home-content";
 import {
-  marketAccentLabelStyles,
-  marketButtonArrowStyles,
-  marketButtonLabelStyles,
-  marketButtonNumberStyles,
-  marketButtonStyles,
-  marketFactLabelStyles,
-  marketFactStyles,
-  marketFactValueStyles,
-  marketFactsStyles,
-  marketLocationStyles,
-  marketLocationsStyles,
-  marketNavListStyles,
-  marketNavStyles,
-  marketPanelAccentStyles,
-  marketPanelContentStyles,
-  marketPanelStyles,
-  marketPanelTitleStyles,
-  marketSummaryStyles,
-  marketsHeaderStyles,
-  marketsInteractiveStyles,
-  marketsIntroStyles,
+  marketMetricDescriptionStyles,
+  marketMetricIconStyles,
+  marketMetricLabelStyles,
+  marketMetricStyles,
+  marketMetricValueStyles,
+  marketsCopyStyles,
+  marketsLayoutStyles,
+  marketsMetricsGridStyles,
   marketsSectionStyles,
+  marketsTextColumnStyles,
   marketsTitleStyles,
 } from "./MarketsSectionStyles";
 
-export function MarketsSection() {
-  const [activeId, setActiveId] = useState<MarketRegion["id"]>(
-    marketRegions[0].id,
-  );
-  const shouldReduceMotion = useReducedMotion();
-  const activeRegion =
-    marketRegions.find((region) => region.id === activeId) ?? marketRegions[0];
+const metricIcons = {
+  globe: Globe2,
+  growth: ChartNoAxesColumnIncreasing,
+  people: UsersRound,
+  cart: ShoppingCart,
+  outlook: ChartNoAxesCombined,
+  consumer: ShoppingBag,
+} satisfies Record<MarketThesisMetric["icon"], LucideIcon>;
 
+const thesisParagraphs = [
+  "The global economic axis is shifting. By 2030, Southeast Asia will house over 700 million consumers, with a combined GDP surpassing $4 trillion. The Middle East is leveraging its sovereign wealth to become a logistics and lifestyle hub, with retail spend projected to grow at 7% CAGR through 2028. South Asia—home to nearly 2 billion people—represents the next frontier of consumer expansion, with India alone projected to become the world's third-largest consumer market by 2030.",
+  "But sophisticated investors are looking deeper. The frontier markets of Central Asia and the Caucasus—Kazakhstan, Azerbaijan, and Georgia—are experiencing a retail renaissance driven by rising incomes, rapid urbanisation, and digital adoption. Kazakhstan alone is projected to surpass $50 billion in retail trade turnover in 2026, with annual real growth of 6.5–7.5%.",
+  "For retail chains in groceries, household goods, and electronics, these regions are not 'emerging'—they are the epicentre of middle-class expansion. We are positioned to help you capture this demographic dividend before the window of first-mover advantage closes.",
+] as const;
+
+export function MarketsSection() {
   return (
-    <section id="markets" aria-labelledby="markets-heading" className={marketsSectionStyles()}>
-      <Container>
-        <AnimatedReveal>
-          <header className={marketsHeaderStyles()}>
+    <section
+      id="markets"
+      aria-labelledby="markets-heading"
+      className={marketsSectionStyles()}
+    >
+      <Container size="wide">
+        <div className={marketsLayoutStyles()}>
+          <AnimatedReveal className={marketsTextColumnStyles()}>
             <SectionLabel number="01" label="The Thesis" />
             <h2 id="markets-heading" className={marketsTitleStyles()}>
-              Why Southeast Asia, the Middle East, South Asia &amp; Beyond?
+              Why Southeast Asia, The Middle East, South Asia &amp; Beyond?
             </h2>
-            <p className={marketsIntroStyles()}>
-              The global economic axis is shifting. New consumer markets are gaining
-              population scale, retail momentum, and strategic relevance for
-              international operators.
-            </p>
-          </header>
-        </AnimatedReveal>
+            <div className={marketsCopyStyles()}>
+              {thesisParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </AnimatedReveal>
+          <AnimatedReveal delay={0.08} className='h-full'>
+            <dl className={marketsMetricsGridStyles()}>
+              {marketThesisMetrics.map((metric) => {
+                const Icon = metricIcons[metric.icon];
 
-        <div className={marketsInteractiveStyles()}>
-          <nav aria-label="Market regions" className={marketNavStyles()}>
-            <ol className={marketNavListStyles()}>
-              {marketRegions.map((region, index) => {
-                const isActive = region.id === activeRegion.id;
                 return (
-                  <li key={region.id}>
-                    <button
-                      type="button"
-                      aria-pressed={isActive}
-                      aria-controls="market-region-panel"
-                      className={marketButtonStyles({ active: isActive })}
-                      onClick={() => setActiveId(region.id)}
-                    >
-                      <span className={marketButtonNumberStyles()}>
-                        {String(index + 1).padStart(2, "0")}
+                  <div key={metric.label} className={marketMetricStyles()}>
+                    <Icon
+                      aria-hidden="true"
+                      className={marketMetricIconStyles()}
+                      strokeWidth={1.25}
+                    />
+                    <dt className={marketMetricLabelStyles()}>{metric.label}</dt>
+                    <dd>
+                      <span className={marketMetricValueStyles()}>{metric.value}</span>
+                      <span className={marketMetricDescriptionStyles()}>
+                        {metric.description}
                       </span>
-                      <span className={marketButtonLabelStyles()}>{region.label}</span>
-                      <ArrowRight
-                        aria-hidden="true"
-                        className={marketButtonArrowStyles({ active: isActive })}
-                        strokeWidth={1.5}
-                      />
-                    </button>
-                  </li>
+                    </dd>
+                  </div>
                 );
               })}
-            </ol>
-          </nav>
-
-          <div id="market-region-panel" className={marketPanelStyles()} aria-live="polite">
-            <div aria-hidden="true" className={marketPanelAccentStyles()} />
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.article
-                key={activeRegion.id}
-                className={marketPanelContentStyles()}
-                initial={shouldReduceMotion ? false : { opacity: 0, y: "0.75rem" }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={
-                  shouldReduceMotion
-                    ? { opacity: 1 }
-                    : { opacity: 0, y: "-0.5rem" }
-                }
-                transition={{ duration: shouldReduceMotion ? 0 : 0.38 }}
-              >
-                <p className={marketAccentLabelStyles()}>{activeRegion.accentLabel}</p>
-                <h3 className={marketPanelTitleStyles()}>{activeRegion.label}</h3>
-                <p className={marketSummaryStyles()}>{activeRegion.summary}</p>
-                <dl className={marketFactsStyles()}>
-                  {activeRegion.facts.map((fact) => (
-                    <div key={fact.label} className={marketFactStyles()}>
-                      <dt className={marketFactLabelStyles()}>{fact.label}</dt>
-                      <dd className={marketFactValueStyles()}>{fact.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <ul role="list" className={marketLocationsStyles()}>
-                  {activeRegion.locations.map((location) => (
-                    <li key={location} className={marketLocationStyles()}>
-                      {location}
-                    </li>
-                  ))}
-                </ul>
-              </motion.article>
-            </AnimatePresence>
-          </div>
+            </dl>
+          </AnimatedReveal>
         </div>
       </Container>
     </section>

@@ -58,13 +58,13 @@ export function ServicesSection() {
                       <h3 className={serviceTitleStyles()}>{service.title}</h3>
                     </div>
                     <p className={serviceDescriptionStyles()}>{service.description}</p>
-                    <ul role="list" className={serviceAreasStyles()}>
+                    {/* <ul role="list" className={serviceAreasStyles()}>
                       {service.areas.map((area) => (
                         <li key={area} className={serviceAreaStyles()}>
                           {area}
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
                   </article>
                 </AnimatedReveal>
               </li>

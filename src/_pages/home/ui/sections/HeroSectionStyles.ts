@@ -7,6 +7,7 @@ export const heroSectionStyles = cva([
   "overflow-hidden",
   "bg-primary-dark",
   "text-white",
+  'min-h-dvh'
 ]);
 
 export const heroAtmosphereStyles = cva([

@@ -3,18 +3,17 @@ export interface NavigationItem {
   readonly href: `#${string}`;
 }
 
-export interface MarketFact {
+export interface MarketThesisMetric {
   readonly value: string;
   readonly label: string;
-}
-
-export interface MarketRegion {
-  readonly id: "southeast-asia" | "middle-east" | "south-asia" | "central-asia";
-  readonly label: string;
-  readonly summary: string;
-  readonly facts: readonly MarketFact[];
-  readonly locations: readonly string[];
-  readonly accentLabel: string;
+  readonly description: string;
+  readonly icon:
+    | "globe"
+    | "growth"
+    | "people"
+    | "cart"
+    | "outlook"
+    | "consumer";
 }
 
 export interface Service {
@@ -50,62 +49,50 @@ export const navigationItems = [
   { label: "About", href: "#about" },
 ] as const satisfies readonly NavigationItem[];
 
-export const marketRegions = [
+export const marketThesisMetrics = [
   {
-    id: "southeast-asia",
     label: "Southeast Asia",
-    summary:
-      "Southeast Asia is emerging as one of the world's largest consumer corridors, combining population scale with substantial economic weight.",
-    facts: [
-      { value: "700M+", label: "Consumers across Southeast Asia" },
-      { value: "$4T", label: "Combined Southeast Asian GDP" },
-    ],
-    locations: ["Jakarta"],
-    accentLabel: "Consumer scale",
+    value: "700M+",
+    description: "Consumers by 2030",
+    icon: "globe",
   },
   {
-    id: "middle-east",
     label: "Middle East",
-    summary:
-      "The Middle East is leveraging its sovereign wealth to become a logistics and lifestyle hub, with retail expansion supported by continued market growth.",
-    facts: [{ value: "7%", label: "Retail CAGR in the Middle East" }],
-    locations: ["Dubai", "Riyadh"],
-    accentLabel: "Retail momentum",
+    value: "7%",
+    description: "Retail spend CAGR through 2028",
+    icon: "growth",
   },
   {
-    id: "south-asia",
     label: "South Asia",
-    summary:
-      "South Asia is home to nearly two billion people and represents a major frontier of consumer expansion for international retail operators.",
-    facts: [{ value: "Nearly 2B", label: "People across South Asia" }],
-    locations: ["Mumbai"],
-    accentLabel: "Demographic scale",
+    value: "~2B",
+    description: "People and the next frontier of consumption",
+    icon: "people",
   },
   {
-    id: "central-asia",
-    label: "Central Asia & Caucasus",
-    summary:
-      "Central Asia and the Caucasus are opening to retail renaissance driven by rising incomes, rapid urbanisation, and digital adoption.",
-    facts: [
-      {
-        value: "$50B+",
-        label: "Kazakhstan retail turnover projected for 2026",
-      },
-      {
-        value: "$100B+",
-        label: "Combined Central Asian retail market projected for 2026",
-      },
-    ],
-    locations: ["Almaty", "Baku", "Tbilisi"],
-    accentLabel: "Emerging corridor",
+    label: "Central Asia",
+    value: "$50B+",
+    description: "Kazakhstan retail trade turnover by 2026",
+    icon: "cart",
   },
-] as const satisfies readonly MarketRegion[];
+  {
+    label: "Growth Outlook",
+    value: "6.5-7.5%",
+    description: "Annual real growth in Kazakhstan",
+    icon: "outlook",
+  },
+  {
+    label: "Consumer Shift",
+    value: "Middle-Class",
+    description: "Expansion across all key markets",
+    icon: "consumer",
+  },
+] as const satisfies readonly MarketThesisMetric[];
 
 export const services = [
   {
     title: "Strategic Market Entry",
     description:
-      "We de-risk expansion through regulatory landscaping, consumer intelligence, competitive analysis, and a structured Go/No-Go framework tailored to each retail vertical.",
+      "We de-risk your expansion. From regulatory landscaping to consumer psychographics, we provide the \"Go/No-Go\" framework tailored to your vertical. We don't guess; we validate through proprietary on-ground intelligence spanning 12+ markets across three regions.",
     areas: [
       "Regulatory landscaping",
       "Consumer intelligence",
@@ -117,7 +104,7 @@ export const services = [
   {
     title: "Partner Sourcing & JV Structuring",
     description:
-      "We identify and assess local partners, distributors, family offices, and investors, then structure Master Franchise and Joint Venture agreements designed to protect the brand and accelerate execution.",
+      "Finding the right local partner is 80% of the battle. Our network spans family offices, sovereign funds, and established distributors across SEA, the Gulf, Central Asia, and the Caucasus. We structure Master Franchise and Joint Venture agreements that protect your IP while ensuring local execution velocity.",
     areas: [
       "Partner sourcing",
       "Due diligence",
@@ -129,7 +116,7 @@ export const services = [
   {
     title: "Omnichannel & Supply Chain Engineering",
     description:
-      "We build resilient retail ecosystems spanning inventory management, cross-border logistics, fulfilment, last-mile delivery, and integrated online-offline commerce.",
+      "We transform traditional retail into agile, data-driven ecosystems. From AI-powered inventory management to hyperlocal e-commerce fulfilment, we ensure your margins survive the complexities of cross-border logistics and last-mile delivery.",
     areas: [
       "Supply chain design",
       "Inventory optimisation",
