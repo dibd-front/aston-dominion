@@ -26,6 +26,7 @@ export interface Service {
 export interface ImpactMetric {
   readonly value: string;
   readonly label: string;
+  readonly icon: "store" | "revenue" | "time" | "markets" | "marketSize" | "commerce";
 }
 
 export interface InsightArticle {
@@ -128,13 +129,37 @@ export const services = [
 ] as const satisfies readonly Service[];
 
 export const impactMetrics = [
-  { value: "320+", label: "Retail outlets launched" },
-  { value: "$2.1B", label: "Combined client revenue growth facilitated" },
+  {
+    value: "320+",
+    label: "Retail outlets launched across 12 countries in the last 36 months.",
+    icon: "store",
+  },
+  {
+    value: "$2.1B",
+    label: "in combined client revenue growth facilitated.",
+    icon: "revenue",
+  },
   {
     value: "47%",
-    label: "Average reduction in supply chain lead time for electronics clients",
+    label: "average reduction in supply chain lead time for electronics clients.",
+    icon: "time",
   },
-  { value: "12", label: "Active markets" },
+  {
+    value: "12",
+    label:
+      "active markets across Indonesia, UAE, Saudi, Vietnam, Malaysia, Kazakhstan, Azerbaijan, and Georgia.",
+    icon: "markets",
+  },
+  {
+    value: "$100B+",
+    label: "Combined retail market size of Central Asia, projected for 2026.",
+    icon: "marketSize",
+  },
+  {
+    value: "19%",
+    label: "Annual e-commerce growth in Kazakhstan (2025).",
+    icon: "commerce",
+  },
 ] as const satisfies readonly ImpactMetric[];
 
 export const processSteps = [

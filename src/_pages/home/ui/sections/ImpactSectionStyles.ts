@@ -44,40 +44,52 @@ export const impactGridStyles = cva([
   "mt-14",
   "grid",
   "grid-cols-2",
+  "gap-[0.0625rem]",
   "border-y-[0.0625rem]",
   "border-white/14",
+  "bg-white/14",
   "lg:mt-18",
-  "lg:grid-cols-4",
+  "lg:grid-cols-3",
+  "xl:grid-cols-6",
 ]);
 
 export const impactMetricStyles = cva([
   "ImpactSection-metric",
-  "min-h-52",
-  "border-white/14",
+  "min-h-[15rem]",
+  "bg-dark-surface",
   "px-4",
   "py-8",
-  "odd:border-r-[0.0625rem]",
-  "[&:nth-child(-n+2)]:border-b-[0.0625rem]",
   "sm:px-7",
-  "lg:min-h-64",
-  "lg:border-r-[0.0625rem]",
-  "lg:[&:nth-child(-n+2)]:border-b-0",
+  "lg:min-h-[16.5rem]",
   "lg:px-8",
   "lg:py-10",
-  "lg:last:border-r-0",
+  "xl:px-5",
 ]);
 
 export const impactMetricRevealStyles = cva([
   "ImpactSection-metricReveal",
   "flex",
+  "h-full",
   "flex-col",
+  "items-center",
+  "justify-center",
+  "text-center",
+]);
+
+export const impactIconStyles = cva([
+  "ImpactSection-icon",
+  "order-1",
+  "mb-5",
+  "size-9",
+  "shrink-0",
+  "text-[#d2b77e]",
 ]);
 
 export const impactValueStyles = cva([
   "ImpactSection-value",
-  "order-1",
+  "order-2",
   "font-serif",
-  "text-[clamp(3rem,8vw,5.5rem)]",
+  "text-[clamp(2.55rem,7vw,3.65rem)]",
   "font-semibold",
   "leading-none",
   "text-[#d2b77e]",
@@ -85,22 +97,11 @@ export const impactValueStyles = cva([
 
 export const impactLabelStyles = cva([
   "ImpactSection-label",
-  "order-2",
-  "mt-5",
-  "max-w-[15rem]",
+  "order-3",
+  "mt-4",
+  "max-w-[14rem]",
   "text-xs",
-  "leading-5",
+  "leading-[1.55]",
   "text-white/68",
-  "sm:text-sm",
-  "sm:leading-6",
-]);
-
-export const impactFootnoteStyles = cva([
-  "ImpactSection-footnote",
-  "relative",
-  "mt-7",
-  "max-w-[52rem]",
-  "text-xs",
-  "leading-5",
-  "text-white/48",
+  "sm:text-[0.8125rem]",
 ]);
