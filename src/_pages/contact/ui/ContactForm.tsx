@@ -105,7 +105,7 @@ export function ContactForm() {
           >
             <div className={contactFormIntroStyles()}>
               <h2 className={contactFormHeadingStyles()}>Start the conversation.</h2>
-              <span className={contactFormStepStyles()}>01 — 05</span>
+              {/* <span className={contactFormStepStyles()}>01 — 05</span> */}
             </div>
 
             <div className={contactFormRowStyles()}>

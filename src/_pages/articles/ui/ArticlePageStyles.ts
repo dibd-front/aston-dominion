@@ -30,13 +30,13 @@ export const articleHeroSectionStyles = cva([
   "relative",
   "overflow-hidden",
   "bg-primary-dark",
-  "pb-20",
-  "pt-32",
+  "pb-12",
+  "pt-25",
   "text-white",
-  "sm:pb-24",
-  "sm:pt-36",
-  "lg:pb-28",
-  "lg:pt-40",
+  "sm:pb-18",
+  "sm:pt-25",
+  "lg:pb-20",
+  "lg:pt-30",
 ]);
 
 export const articleHeroAtmosphereStyles = cva([

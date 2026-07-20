@@ -173,5 +173,5 @@ export const articleReadIconStyles = cva([
   "size-4",
   "transition-transform",
   "duration-300",
-  "group-hover:translate-x-1",
+  // "group-hover:translate-x-1",
 ]);
