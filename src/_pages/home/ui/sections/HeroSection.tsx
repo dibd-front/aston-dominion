@@ -18,6 +18,7 @@ import {
   heroTitleStyles,
   heroVisualStyles,
 } from "./HeroSectionStyles";
+import { AnimatedReveal } from '@/shared/ui/animated-reveal';
 
 export function HeroSection() {
   return (
@@ -27,21 +28,27 @@ export function HeroSection() {
       <Container size="wide">
         <div className={heroInnerStyles()}>
           <div className={heroContentStyles()}>
-            <p className={heroEyebrowStyles()}>
-              Investment &amp; Market Expansion Advisory
-            </p>
+            <AnimatedReveal>
+              <p className={heroEyebrowStyles()}>
+                Investment &amp; Market Expansion Advisory
+              </p>
+            </AnimatedReveal>
             <h1 id="hero-heading" className={heroTitleStyles()}>
               The New Latitude of Growth.
             </h1>
-            <p className={heroBodyStyles()}>
-              Diversify into the world's fastest-growing consumer corridors. We architect market entry and operational scale for FMCG, Grocery, and Consumer Electronics retail chains across Southeast Asia, the Middle East, and the emerging frontier markets of the Caucasus and Central Asia.
-            </p>
-            <div className={heroActionsStyles()}>
-              <ButtonLink href="#markets">Explore Markets</ButtonLink>
-              <ButtonLink href="#services" variant="outlineLight">
-                Our Capabilities
-              </ButtonLink>
-            </div>
+            <AnimatedReveal>
+              <p className={heroBodyStyles()}>
+                Diversify into the world's fastest-growing consumer corridors. We architect market entry and operational scale for FMCG, Grocery, and Consumer Electronics retail chains across Southeast Asia, the Middle East, and the emerging frontier markets of the Caucasus and Central Asia.
+              </p>
+            </AnimatedReveal>
+            <AnimatedReveal delay={0.3}>
+              <div className={heroActionsStyles()}>
+                <ButtonLink href="#markets">Explore Markets</ButtonLink>
+                <ButtonLink href="#services" variant="outlineLight">
+                  Our Capabilities
+                </ButtonLink>
+              </div>
+            </AnimatedReveal>
           </div>
           <div className={heroVisualStyles()}>
             <GrowthCorridorsVisual />

@@ -141,6 +141,7 @@ export const articlesGridStyles = cva([
   "list-none",
   "gap-x-8",
   "gap-y-16",
+  "md:grid-cols-2",
   "lg:grid-cols-12",
   "lg:gap-y-24",
 ]);
