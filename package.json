@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tanstack/react-form": "^1.33.2",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^1.25.0",
     "motion": "^12.42.2",

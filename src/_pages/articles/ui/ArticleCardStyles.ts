@@ -35,7 +35,7 @@ export const articleCardImageFrameStyles = cva(
     "ArticleCard-imageFrame",
     "relative",
     "mb-7",
-    "overflow-hidden",
+    "overflow-hidden backface-visibility-hidden",
     "bg-[#e5e1d8]",
   ],
   {
@@ -127,7 +127,7 @@ export const articleCardReadStyles = cva([
   "flex",
   "items-center",
   "gap-2",
-  "pt-7",
+  "pt-7 relative overflow-hidden",
   "text-[0.6875rem]",
   "font-semibold",
   "tracking-[0.08em]",
@@ -137,9 +137,9 @@ export const articleCardReadStyles = cva([
 
 export const articleCardReadIconStyles = cva([
   "ArticleCard-readIcon",
-  "size-4",
+  "size-4 relative",
   "transition-transform",
   "duration-300",
-  "group-hover:translate-x-[0.125rem]",
-  "group-hover:-translate-y-[0.125rem]",
+  // "group-hover:translate-x-[0.125rem]",
+  // "group-hover:-translate-y-[0.125rem]",
 ]);
