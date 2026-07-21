@@ -122,7 +122,6 @@ export const contactControlStyles = cva(
       },
       kind: {
         input: ["h-11"],
-        select: ["h-11", "cursor-pointer", "appearance-none", "[color-scheme:dark]"],
         textarea: ["min-h-[6.5rem]", "resize-y", "py-3", "leading-6"],
       },
     },
@@ -132,21 +131,6 @@ export const contactControlStyles = cva(
     },
   },
 );
-
-export const contactSelectWrapStyles = cva([
-  "ContactForm-selectWrap",
-  "relative",
-  "after:pointer-events-none",
-  "after:absolute",
-  "after:right-0",
-  "after:top-1/2",
-  "after:size-1.5",
-  "after:-translate-y-1/2",
-  "after:rotate-45",
-  "after:border-b-[0.0625rem]",
-  "after:border-r-[0.0625rem]",
-  "after:border-accent",
-]);
 
 export const contactErrorStyles = cva([
   "ContactForm-error",

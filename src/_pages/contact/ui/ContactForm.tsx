@@ -6,6 +6,13 @@ import { Check, Send, Sparkles } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/shared/ui/select";
+import {
   contactFormDefaultValues,
   contactMarketOptions,
   getContactFieldError,
@@ -27,11 +34,9 @@ import {
   contactFormIntroStyles,
   contactFormPanelStyles,
   contactFormRowStyles,
-  contactFormStepStyles,
   contactFormStyles,
   contactLabelStyles,
   contactRequiredStyles,
-  contactSelectWrapStyles,
   contactSubmitIconStyles,
   contactSubmitStyles,
   launchParticleStyles,
@@ -243,25 +248,28 @@ export function ContactForm() {
                         Priority market
                         <span className={contactRequiredStyles()}>Required</span>
                       </label>
-                      <div className={contactSelectWrapStyles()}>
-                        <select
+                      <Select
+                        name={field.name}
+                        value={field.state.value}
+                        onValueChange={field.handleChange}
+                      >
+                        <SelectTrigger
                           id={field.name}
-                          name={field.name}
-                          value={field.state.value}
                           aria-invalid={invalid}
                           aria-describedby={invalid ? `${field.name}-error` : undefined}
-                          className={contactControlStyles({ invalid, kind: "select" })}
+                          aria-required="true"
                           onBlur={field.handleBlur}
-                          onChange={(event) => field.handleChange(event.target.value)}
                         >
-                          <option value="">Select a region</option>
+                          <SelectValue placeholder="Select a region" />
+                        </SelectTrigger>
+                        <SelectContent>
                           {contactMarketOptions.map((market) => (
-                            <option key={market} value={market}>
+                            <SelectItem key={market} value={market}>
                               {market}
-                            </option>
+                            </SelectItem>
                           ))}
-                        </select>
-                      </div>
+                        </SelectContent>
+                      </Select>
                       <span id={`${field.name}-error`} role="alert" className={contactErrorStyles()}>
                         {error ?? ""}
                       </span>
